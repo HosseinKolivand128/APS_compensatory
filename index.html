@@ -4,191 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    
     <style>
-        body {
-            background-color: rgb(255, 255, 255);
-        }
-
-        header {
-            display: flex;
-            /* justify-content: flex-start;
-            justify-content: flex-end;
-            justify-self: center;
-            justify-content: space-around;
-            justify-content: space-evenly; */
-            /* width: 100%; */
-            justify-content: space-around;
-            align-items: baseline;
+        .transform-box {
             padding: 20px;
-            background-color: #c6faf8;
-            /* flex-flow: row wrap; */
-            /* align-content: ; */
+            margin: 10px;
+            background-color: #f2f2f2;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .transform-box:hover {
+            transform: scale(1.1);
         }
 
-        .card {
-            width: 300px;
-            height: 450px;
-            padding: 20px;
-            margin: 20px;
-            background-color: burlywood;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-            /* align-items: flex-start; */
-            /* align-items: flex-end; */
-            /* align-items: baseline; */
-            /* align-items: stretch; */
-            align-items: center;
-        }
-
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        img {
-            width: 300px;
-            height: 500px;
-            border-radius: 5px;
-        }
-
-        .cardOne {
-            flex-shrink: 2;
-        }
-
-        .first {
-            display: flex;
-            justify-content: space-around;
-            align-items: baseline;
-        }
-
-        .hover {
-            display: flex;
-            flex-flow: row nowrap;
-        }
-
-        .square {
-            width: 50px;
-            height: 50px;
-            background-color: cornflowerblue;
-            margin: 5px;
-        }
-
-        .square:hover {
-            background-color: crimson;
-        }
-
-        a:active {
-            font-size: 30px;
-            color: red;
-        }
-
-        a:visited {
-            /* color:greenyellow */
-        }
-
-        .first-child {
-            display: flex;
-            flex-flow: row nowrap;
-        }
-
-        .square:last-child:hover {
-            background-color: deeppink;
-        }
-
-        /* @media (width>=390px)   {
-            .card{
-                background-color: crimson;
-                width: 10%;
-            }
-            img{
-                width: 30%;
-            }
-        } */
-    </style>
+        </style>
+    <title>Bootstrap Grid with Transform Effects</title>
 </head>
 
 <body>
-
-    <header>
-        <h1>Welcome to flexbox session</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-success">
+            <a class="navbar-brand" href="#">My Website</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-    </header>
+        
+        <div class="container mt-4">
+            <h1>Welcome to My Bootstrap Webpage</h1>
+            <p>This is a simple webpage created using Bootstrap.</p>
+        </div>
 
-    <main>
-        <section class="cards">
-            <div class="card cardOne">
-                <h2>Class A</h2>
-                <img
-                    src="https://images.ctfassets.net/9l3tjzgyn9gr/photo-112402/cf25fec1eea7ab0665f586b3481e436c/112402-rabbit-lucky-animals-510x600.jpg">
-                <p>Lorem ipsum dolor </p>
-            </div>
-            <div class="card cardTwo">
-                <h2>Class B</h2>
-                <img src="https://www.marylandzoo.org/wp-content/uploads/2018/04/lemuranimaheader3.jpg">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
-            <div class="card cardThree">
-                <h2>Class C</h2>
-                <img
-                    src="https://images.ctfassets.net/9l3tjzgyn9gr/photo-112402/cf25fec1eea7ab0665f586b3481e436c/112402-rabbit-lucky-animals-510x600.jpg">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
-            <div class="card cardThree">
-                <h2>Class D</h2>
-                <img src="https://images.wsj.net/im-218281/8SR">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
-        </section>
-
-        <section>
-            <h3>pseudo class</h3>
-            <section>
-                <div class="first">
-                    <p class="title">
-                        First
-                        <a href="/index.html">LINK</a>
-                        <a href="/index.css">LINK 2</a>
-                    </p>
-                    <div class="hover">
-                        <div class="square"></div>
-                        <div class="square"></div>
-                        <div class="square"></div>
-                        <div class="square"></div>
-                        <div class="square"></div>
-                        <div class="square"></div>
+         <div class="container">
+                <div class="row">
+                
+                    <div class="col-md-4">
+                        <div class="transform-box">
+                            <h2>Column 1</h2>
+                            <p>This is the content for column 1.</p>
+                            <button class="btn btn-danger">Button</button>
+                        </div>
                     </div>
-                </div>
-                <div class="first">
-                    <p class="title">
-                        First
-                        <a href="/index.html">LINK</a>
-                        <a href="/index.css">LINK 2</a>
-                    </p>
-                    <div class="first-child">
-                        <div class="square"></div>
-                        <div class="square"></div>
-                        <div class="square"></div>
-                        <div class="square"></div>
-                        <div class="square"></div>
-                        <div class="square"></div>
+                
+                    <div class="col-md-4">
+                        <div class="transform-box">
+                            <h2>Column 2</h2>
+                            <p>This is the content for column 2.</p>
+                            <button class="btn btn-success">Button</button>
+                        </div>
                     </div>
+                
+                    <div class="col-md-4">
+                        <div class="transform-box">
+                            <h2>Column 3</h2>
+                            <p>This is the content for column 3.</p>
+                            <button class="btn btn-warning">Button</button>
+                        </div>
+                    </div>
+                
                 </div>
-            </section>
-        </section>
-    </main>
+            </div>
 
-    <footer>
-
-    </footer>
+            <!-- 
+                WHAT IS SPAN IN GRID
+                WHAT DOES 2/7 MEANS
+             -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
